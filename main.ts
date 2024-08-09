@@ -33,10 +33,10 @@ basic.forever(function () {
         basic.showArrow(ArrowNames.North)
         radio.sendValue("b", 3)
     } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P15)) {
-        basic.showArrow(ArrowNames.South)
+        basic.showArrow(ArrowNames.East)
         radio.sendValue("b", 4)
     } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P14)) {
-        basic.showArrow(ArrowNames.East)
+        basic.showArrow(ArrowNames.South)
         radio.sendValue("b", 5)
     } else {
         basic.clearScreen()
