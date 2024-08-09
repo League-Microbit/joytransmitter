@@ -1,3 +1,5 @@
+let py = 0
+let px = 0
 let y = 0
 let x = 0
 joystickbit.initJoystickBit()
@@ -38,10 +40,12 @@ basic.forever(function () {
         radio.sendValue("b", 5)
     } else {
         basic.clearScreen()
-        x = Math.map(joystickbit.getRockerValue(joystickbit.rockerType.X) - 100, 1023, 0, -2, 2) + 2
-        y = Math.map(joystickbit.getRockerValue(joystickbit.rockerType.Y) - 100, 1023, 0, -2, 2) + 2
+        x = joystickbit.getRockerValue(joystickbit.rockerType.X)
+        y = joystickbit.getRockerValue(joystickbit.rockerType.Y)
+        px = Math.map(x - 100, 1023, 0, -2, 2) + 2
+        py = Math.map(y - 100, 1023, 0, -2, 2) + 2
         radio.sendValue("x", x)
         radio.sendValue("y", y)
-        led.plot(x, y)
+        led.plot(px, py)
     }
 })
