@@ -21,6 +21,10 @@ basic.forever(function () {
         radio.sendValue("b", 4)
     } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P14)) {
         radio.sendValue("b", 5)
+    } else if (input.buttonIsPressed(Button.AB)) {
+        radio.sendValue("b", 6)
+    } else if (input.isGesture(Gesture.Shake)) {
+        radio.sendValue("b", 7)
     } else if (input.logoIsPressed()) {
         RadioGroup = (RadioGroup + 1) % 3
         radio.setGroup(RadioGroup)
