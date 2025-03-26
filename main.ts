@@ -6,6 +6,7 @@ joystickbit.initJoystickBit()
 joystickbit.Vibration_Motor(200)
 pins.setAudioPin(AnalogPin.P0)
 music.play(music.tonePlayable(262, music.beat(BeatFraction.Sixteenth)), music.PlaybackMode.InBackground)
+let RadioGroup = 1
 radio.setGroup(1)
 basic.forever(function () {
     if (input.buttonIsPressed(Button.A)) {
@@ -20,6 +21,11 @@ basic.forever(function () {
         radio.sendValue("b", 4)
     } else if (joystickbit.getButton(joystickbit.JoystickBitPin.P14)) {
         radio.sendValue("b", 5)
+    } else if (input.logoIsPressed()) {
+        RadioGroup = (RadioGroup + 1) % 3
+        radio.setGroup(RadioGroup)
+        basic.showNumber(RadioGroup)
+        basic.pause(1000)
     } else {
         basic.clearScreen()
         x = joystickbit.getRockerValue(joystickbit.rockerType.X)
