@@ -16,10 +16,10 @@ All commands are sent using `radio.sendValue(name, value)`.
 |-------------------------------------------|----------------------|----------------------------------------------|
 | Button A is pressed                        | `radio.sendValue("b", 0)` | Button A pressed                           |
 | Button B is pressed                        | `radio.sendValue("b", 1)` | Button B pressed                           |
-| Joystick button on pin P12 pressed         | `radio.sendValue("b", 2)` | Joystick button P12                         |
-| Joystick button on pin P13 pressed         | `radio.sendValue("b", 3)` | Joystick button P13                         |
-| Joystick button on pin P15 pressed         | `radio.sendValue("b", 4)` | Joystick button P15                         |
-| Joystick button on pin P14 pressed         | `radio.sendValue("b", 5)` | Joystick button P14                         |
+| Joystick left button                       | `radio.sendValue("b", 2)` | Joystick button P12                         |
+| Joystick up button                         | `radio.sendValue("b", 3)` | Joystick button P13                         |
+| Joystick right button                      | `radio.sendValue("b", 4)` | Joystick button P15                         |
+| Joystick down pressed                      | `radio.sendValue("b", 5)` | Joystick button P14                         |
 | Buttons A and B are pressed together       | `radio.sendValue("b", 6)` | Button A+B combination                      |
 | Shake gesture detected                     | `radio.sendValue("b", 7)` | Shake gesture detected                      |
 | Logo is pressed                            | `radio.setGroup(...)`     | Changes radio group; shows group on display |
