@@ -7,7 +7,7 @@ joystickbit.Vibration_Motor(200)
 pins.setAudioPin(AnalogPin.P0)
 music.play(music.tonePlayable(262, music.beat(BeatFraction.Sixteenth)), music.PlaybackMode.InBackground)
 let RadioGroup = 1
-radio.setGroup(1)
+radio.setGroup(RadioGroup)
 basic.forever(function () {
     if (input.buttonIsPressed(Button.A)) {
         radio.sendValue("b", 0)
